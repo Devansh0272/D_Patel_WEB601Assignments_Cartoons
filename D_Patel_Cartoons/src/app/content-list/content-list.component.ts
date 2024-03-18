@@ -93,7 +93,7 @@ export class ContentListComponent implements OnInit {
       title: "Random cartoon 2",
       description: "Some description",
       creator: "creator 2",
-      imgURL: "https://i.pinimg.com/originals/3d/4a/7d/3d4a7d80c9a6e8c5247b441c68829eac.jpg",
+      imgURL: "",
       type: "",
       tags: ["Kid", "Comedy"]
     }
