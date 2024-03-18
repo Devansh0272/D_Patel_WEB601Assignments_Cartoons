@@ -1,7 +1,14 @@
 <input type="text" [(ngModel)]="searchTitle" placeholder="Enter title">
 <button (click)="checkContentExists()">Check Cartoon Existence</button>
 
-<p [ngStyle]="{'color': contentExists ? 'green' : 'red'}">{{ message }}</p>
+
+<app-create-content (createContent)="onContentCreated($event)"></app-create-content>
+<div>
+  <div *ngFor="let content of contentItems">
+    <app-content-card [contentItem]="content"></app-content-card>
+  </div>
+</div>
+<!-- <p [ngStyle]="{'color': contentExists ? 'green' : 'red'}">{{ message }}</p>
 
 <section>
 <h1>Not specified</h1>
@@ -14,4 +21,4 @@
 <section>
 <h1>Fiction</h1>
 <app-content-card *ngFor="let contentItem of contentItems | typefilter: 'Fiction'" [contentItem]="contentItem"></app-content-card>
-</section>
+</section> -->
